@@ -19,24 +19,22 @@ function NintendoGamesD() {
     //if we got thus far: article is not undefined
     return (
         <div className="w-75 mx-auto d-flex flex-column justify-content-center align-items-center">
-            <h3>{nameOfGame}</h3>
+            <img
+                className="w-25 shadow-lg p-3 bg-white rounded"
+                src={image}
+                alt={nameOfGame}
+            />
+            <h3 className={css.name}>{nameOfGame}</h3>
+            <p className={css.p}>{description}</p>
             <button
-                className="btn btn-primary w-100"
+                className="btn btn-primary w-10 m-2"
                 onClick={() => dispatch(toggleBuying(article.id))}
             >
                 {isGettingBuied && "Being Buied"}
                 {!isGettingBuied && "Buy"}
             </button>
-
-
-            <img
-                className="w-50 shadow-lg p-3 bg-white rounded"
-                src={image}
-                alt={nameOfGame}
-            />
-            <p className={css.p}>{description}</p>
             <button
-                className="btn btn-primary w-50"
+                className="btn btn-danger w-10 m-2"
                 onClick={() => {
                     navigate(-1);
                 }}

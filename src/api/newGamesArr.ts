@@ -1,104 +1,104 @@
-import pic1 from "../images/Horizon-Forbidden-West.jpg";
-import pic2 from "../images/splatoon3.jpg";
-import pic3 from "../images/God-of-War-Ragnarok.jpg";
-import pic4 from "../images/Elden-Ring.jpg";
+import pic1 from "../images/Ghost-of-Tsushima-Directors-Cut.jpg"
+import pic2 from "../images/Metroid-Prime-Remastered.jpg";
+import pic3 from "../images/The-Last-of-Us-Part-1.jpg";
+import pic4 from "../images/Call-of-Duty-Vanguard.jpg";
 import pic5 from "../images/TMNT-Shredders-Revenge.jpg";
 import pic6 from "../images/A-Plague-Tale-Requiem.jpg";
-import pic7 from "../images/pokemon-scarlet.jpg";
-import pic8 from "../images/pokemon-violet.jpg";
+import pic7 from "../images/Mario-Plus-Rabbids-Sparks-of-Hope.jpg";
+import pic8 from "../images/Xenoblade-Chronicles-3.jpg";
 import pic9 from "../images/Fire_Emblem_Engage.jpg";
-import pic10 from "../images/hogwarts-legacy.jpg";
+import pic10 from "../images/Calll-of-Duty-Modern-Warfare-II.jpg"
 import { NewGameArticle } from "../features/games/games.d";
 
 export const newGamesArr: NewGameArticle[] = [
     {
-        id: "5300",
-        nameOfGame: "Horizon Forbidden West for PS5",
+        id: "5356",
+        nameOfGame: "Ghost of Tsushima Director's Cut for PS5",
         image: pic1,
-        description: "זהו משחק המשך Horizon Forbidden West, ומשוחק בעולם פתוח פוסט-אפוקליפטי עם נקודת מבט של גוף שלישי , שחקנים שולטים בדמות הגיבור אלוי.",
-        company: "Sony Playstation",
-        price: 169,
+        description: "In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the east. Uncover the hidden words of Tsushima in an open-world action adventure in Ghost of Tsushima. Challenge opponents with your katana, master the art of archery, and develop stealth tactics.",
+        company: "New",
+        price: 27.99,
         isGettingBuied: false
     },
     {
-        id: "13204",
-        nameOfGame: "Splatoon 3",
+        id: "13330",
+        nameOfGame: "Metroid Prime Remastered",
         image: pic2,
-        description: "משחק יריות גוף שלישי ציורי ומגניב במיוחד עם שלבים חדשים ומצבי משחק שונים.",
-        company: "Nintendo",
-        price: 209,
+        description: "Get behind the visor of intergalactic bounty hunter Samus Aran in her critically-acclaimed first-person adventure Step into the boots of Samus Aran as you navigate the winding paths and interconnected environments of an alluring-yet-dangerous alien planet. Use powers like the iconic Morph Ball and Grapple Beam to revisit hard-to-reach areas and find a path forward. With revamped graphics, sound, unlockable art, and updated control schemes, Samus’ 3D platforming debut has reached greater heights. Calm and capable, Samus takes on this solo mission…but she is far from alone.",
+        company: "New",
+        price: 39.99,
         isGettingBuied: false
     },
     {
-        id: "14739",
-        nameOfGame: "God of War Ragnarok for PS5",
+        id: "14169",
+        nameOfGame: "The Last of Us Part 1 for PS5",
         image: pic3,
-        description: "העלילה מתחילה היכן שהמשחק הקודם נגמר. למרות האמון אשר נבנה בין קראטוס ובנו, אטראוס, עדיין יש ביניהם מידה רבה של מורכבות. במיוחד עכשיו, כאשר המורשת של אטראוס נחשפה, ואחרי הנבואה שקראטוס ראה. אטראוס הצעיר והסקרן רוצה לא רק להבין מי הוא, אלא להבין גם מי הוא יכול להיות. הוא גם לא מסוגל להרפות מהתפקיד של לוקי הערמומי ברגנרוק, המלחמה שתביא לסוף העולם. הוא רוצה לעשות כל שביכולתו על מנת להגן על אלו הקרובים אליו, אך אינו יכול לעמוד מנגד ולהתעלם מהמלחמה אשר מאיימת על קיומן של תשע הממלכות.",
-        company: "Sony Playstation",
-        price: 259,
+        description: "Relive the beloved game that started it all. Experience the emotional storytelling and unforgettable characters in The Last of Us, winner of over 200 Game of the Year awards. In a ravaged civilization, where infected and hardened survivors run rampant, Joel, a weary protagonist, is hired to smuggle 14-year - old Ellie out of a military quarantine zone.However, what starts as a small job soon transforms into a brutal cross- country journey.Includes the complete The Last of Us single - player story and celebrated prequel chapter, Left Behind, which explores the events that changed the lives of Ellie and her best friend Riley forever.",
+        company: "New",
+        price: 44.99,
         isGettingBuied: false
     },
     {
-        id: "11013",
-        nameOfGame: "Elden Ring for PS5",
+        id: "14403",
+        nameOfGame: "Call of Duty: Vanguard for PS5",
         image: pic4,
-        description: "צללו לתוך הרפתקה מרגשת והכריע את גורלו של עולם עצום מלא בתככים ועוצמה",
-        company: "Sony Playstation",
-        price: 209,
+        description: "COD returns with breathtaking gameplay that redefines war like you’ve never seen before. Immerse yourself into the most gritty and tumultuous WWII battle ever in this epic, first-person shooter video game.",
+        company: "New",
+        price: 29.99,
         isGettingBuied: false
     },
     {
         id: "17386",
         nameOfGame: "TMNT: Shredder's Revenge",
         image: pic5,
-        company: "X-Box",
-        description: "Teenage Mutant Ninja Turtles: Shredder's Revenge כולל משחק פורץ דרך המושרש במכניקת קטטה קלאסית נצחית, שהובאו אליכם על ידי מומחי המכות ב-Dotemu (Streets of Rage 4) ו-Tribute Games. תפרץ את דרכך בסביבות אמנות פיקסלים מדהימות והרוג טונות של אויבים אכזריים עם הצב האהוב עליך, כל אחד עם הכישורים והמהלכים שלו - מה שהופך כל ריצה לייחודית! בחר לוחם, השתמש בשילובים רדיקליים כדי להביס את היריבים שלך ולחוות קרבות אינטנסיביים עמוסים באקשן עוצר נשימה ויכולות נינג'ה שערורייתיות. הישאר חד כשאתה מתמודד מול Shredder ושבט הרגליים הנאמן שלו לבד, או תפוס את מיטב הניצנים שלך ושחק עם עד 6 שחקנים בו זמנית!",
-        price: 149,
+        company: "New",
+        description: "Teenage Mutant Ninja Turtles: Shredder’s Revenge features groundbreaking gameplay rooted in timeless classic brawling mechanics, brought to you by the beat ’em up experts at Dotemu and Tribute Games.",
+        price: 29.99,
         isGettingBuied: false
     },
     {
         id: "13719",
         nameOfGame: "A Plague Tale: Requiem",
         image: pic6,
-        company: "X-Box",
-        description: "רחוק מעבר לים, האי קורא לכם... צאו למסע מרגש בעולם אכזר ומרהיב, מעוות על ידי כוחות על-טבעיים.",
-        price: 219,
+        company: "New",
+        description: "After escaping their devastated homeland, Amicia and Hugo travel far south, to new regions and vibrant cities. But, when Hugo’s powers reawaken, death and destruction return in a flood of devouring rats. Forced to flee once more, the siblings place their hopes in a prophesized island that may hold the key to saving Hugo.",
+        price: 54.99,
         isGettingBuied: false
     },
     {
-        id: "14622",
-        nameOfGame: "Pokemon Scarlet",
+        id: "18822",
+        nameOfGame: "Mario Plus Rabbids Sparks of Hope",
         image: pic7,
-        description: "הפרק החדש ביותר בסדרת פוקימון מגיע לNintendo Switch מאוחר יותר השנה. אתם יכולים לחקור את העולם הפתוח לרווחה של פוקימון סקרלט בקצב שלכם. במשחק תוכלו ליהנות מההרפתקאות האיקוניות של סדרת הפוקימונים, כמו להילחם נגד פוקימונים פראיים ולנסות לתפוס אותם! בחרו בSprigatito פוקימון חתול הדשא, Fuecoco פוקימון קרוקודיל אש או Quaxly פוקימון הברווזון בתור השותף הראשון שלכם לפני שתצא למסע באזור החדש.",
-        company: "Nintendo",
-        price: 209,
+        description: "Team up with Mario, Luigi, Princess Peach, Rabbid Peach, Rabbid Luigi, and their friends on a galactic journey to defeat a malevolent entity and save your Spark companions. Explore planets throughout the galaxy as you uncover mysterious secrets and compelling quests!",
+        company: "New",
+        price: 37.99,
         isGettingBuied: false
     },
     {
-        id: "14623",
-        nameOfGame: "Pokemon Voilet",
+        id: "7589",
+        nameOfGame: "Xenoblade Chronicles 3",
         image: pic8,
-        description: "הפרק החדש ביותר בסדרת פוקימון מגיע לNintendo Switch מאוחר יותר השנה. אתם יכולים לחקור את העולם הפתוח לרווחה של פוקימון ואיולאט בקצב שלכם. במשחק תוכלו ליהנות מההרפתקאות האיקוניות של סדרת הפוקימונים, כמו להילחם נגד פוקימונים פראיים ולנסות לתפוס אותם! בחרו בSprigatito פוקימון חתול הדשא, Fuecoco פוקימון קרוקודיל אש או Quaxly פוקימון הברווזון בתור השותף הראשון שלכם לפני שתצא למסע באזור החדש.",
-        company: "Nintendo",
-        price: 209,
+        description: "Live to fight and fight to live in a warring world with a dark secret. Join Noah and Mio, members of the two opposing nations at the center of this conflict, on a heartfelt journey to end the cycle of violence. A group of six characters from these nations join together to awaken the colonies of Aionios to the underlying threat both nations face. Traverse massive, fantastical sci-fi landscapes as you expose the true enemy pulling the strings behind the conflicts.",
+        company: "New",
+        price: 44.99,
         isGettingBuied: false
     },
     {
         id: "8321",
         nameOfGame: "Fire Emblem Engage",
         image: pic9,
-        company: "Nintendo",
+        company: "New",
         description: "In a war against the Fell Dragon, four kingdoms worked together with heroes from other worlds to seal away this great evil. One-thousand years later, this seal has weakened and the Fell Dragon is about to reawaken. As a Divine Dragon, use rich strategies and robust customization to meet your destiny—to collect 12 Emblem Rings and bring peace back to the Continent of Elyos.",
-        price: 249,
+        price: 57.99,
         isGettingBuied: false
     },
     {
-        id: "16327",
-        nameOfGame: "Hogwarts Legacy",
+        id: "5427",
+        nameOfGame: "Call of Duty: Modern Warface II",
         image: pic10,
-        description: "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books. For the first time, experience Hogwarts in the 1800s. Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. Now you can take control of the action and be at the center of your own adventure in the wizarding world. Your legacy is what you make of it.",
-        company: "X-Box",
-        price: 279,
+        description: "The iconic squad of fearless soldiers are back in Call of Duty: Modern Warfare 2 on Xbox Series X. MW2 continues the gripping and adrenaline-rushing action as players fight to save the world from devastation. Experience the intense campaign and riveting gameplay in this epic, first-person shooter video game.",
+        company: "New",
+        price: 64.99,
         isGettingBuied: false
     }
 ];

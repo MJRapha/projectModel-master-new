@@ -1,21 +1,19 @@
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { toggleBuying } from '../../features/games/gameSlice';
-import css from './PS4AndPS5Games.module.scss'
-function PS4And5GamesD() {
+import { useAppSelector } from '../../app/hooks';
+import css from './SoonGames.module.scss'
+function SoonGamesD() {
     const { id } = useParams();
     const navigate = useNavigate();
-    const dispatch = useAppDispatch();
     const article = useAppSelector((state) =>
-        state.PSGames.PSarticles.find((a) => a.id === id)
+        state.SoonGames.articles.find((a) => a.id === id)
     );
 
     if (!article) {
         //user messed with the url: send him/her back to news
-        return <Navigate to="/games" />;
+        return <Navigate to="/" />;
     }
 
-    const { nameOfGame, description, image, isGettingBuied } = article;
+    const { nameOfGame, description, image, comingSoon } = article;
     //if we got thus far: article is not undefined
     return (
         <div className="w-75 mx-auto d-flex flex-column justify-content-center align-items-center">
@@ -26,13 +24,7 @@ function PS4And5GamesD() {
             />
             <h3 className={css.name}>{nameOfGame}</h3>
             <p className={css.p}>{description}</p>
-            <button
-                className="btn btn-primary w-10 m-2"
-                onClick={() => dispatch(toggleBuying(article.id))}
-            >
-                {isGettingBuied && "Being Buied"}
-                {!isGettingBuied && "Buy"}
-            </button>
+            <h4 className={css.p}>{comingSoon}</h4>
             <button
                 className="btn btn-danger w-10 m-2"
                 onClick={() => {
@@ -45,4 +37,4 @@ function PS4And5GamesD() {
     )
 }
 
-export default PS4And5GamesD
+export default SoonGamesD

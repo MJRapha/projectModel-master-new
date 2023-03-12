@@ -1,6 +1,10 @@
 import { useState } from 'react'
+import { IsActiveProps } from '../../@types/types'
+import css from './Contact.module.scss'
 
 function Contact() {
+    /* const activeClass = (e: IsActiveProps, clz: string = "") =>
+        e.isActive ? `${css.active} ${clz}` : clz; */
     //const [name, setName] = useState('')
     const [formStatus, setFormStatus] = useState('Send')
     const [textMessage, setTextMessage] = useState('')
@@ -38,7 +42,7 @@ function Contact() {
                     </label>
                     <textarea className="form-control" id="message" required />
                 </div>
-                <button className="btn btn-danger" type="submit" /* onClick={(e) => setName(e.target.value)} */>
+                <button className={css.buttonSub} type="submit" /* onClick={(e) => setName(e.target.value)} */>
                     {formStatus}
                 </button>
             </form>

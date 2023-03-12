@@ -36,7 +36,7 @@ export const gameSlice = createSlice({
                 state.Xarticles[index].isGettingBuied = !state.Xarticles[index].isGettingBuied;
             }
         },
-        BuiedCard: (state, action: PayloadAction<string>) => {
+        BuiedXboxCard: (state, action: PayloadAction<string>) => {
             //action.payload = id of the card to remove
             const index = state.Xarticles.findIndex((c) => c.id === action.payload);
 
@@ -49,5 +49,5 @@ export const gameSlice = createSlice({
 
 //export the reducer
 export default gameSlice.reducer
-export const { toggleBuying, BuiedCard } = gameSlice.actions
+export const { toggleBuying, BuiedXboxCard } = gameSlice.actions
 

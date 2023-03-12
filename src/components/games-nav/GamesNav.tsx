@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -9,7 +8,7 @@ const GamesNav = () => {
     const activeClass = (e: IsActiveProps, clz: string = "") =>
         e.isActive ? `${css.active} ${clz}` : clz;
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="dark" expand="lg">
             <Container>
                 <nav className={css.navbar}>
                     <NavLink className={activeClass} to="nintendo">

@@ -36,7 +36,7 @@ export const gameSlice = createSlice({
                 state.Narticles[index].isGettingBuied = !state.Narticles[index].isGettingBuied;
             }
         },
-        BuiedCard: (state, action: PayloadAction<string>) => {
+        BuiedNintendoCard: (state, action: PayloadAction<string>) => {
             //action.payload = id of the card to remove
             const index = state.Narticles.findIndex((c) => c.id === action.payload);
 
@@ -49,5 +49,5 @@ export const gameSlice = createSlice({
 
 //export the reducer
 export default gameSlice.reducer
-export const { toggleBuying, BuiedCard } = gameSlice.actions
+export const { toggleBuying, BuiedNintendoCard } = gameSlice.actions
 
