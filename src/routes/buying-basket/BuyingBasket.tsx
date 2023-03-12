@@ -48,7 +48,7 @@ const BuyingBasket = (/* props: [NintendoGameArticle, SonyGameArticle, XboxGameA
                     });
                 }}
             >
-                Add Card:
+                Buy:
             </button>
         </>
     )
