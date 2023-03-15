@@ -8,6 +8,7 @@ import pic7 from "../images/Mario-Plus-Rabbids-Sparks-of-Hope.jpg";
 import pic8 from "../images/Xenoblade-Chronicles-3.jpg";
 import pic9 from "../images/Fire_Emblem_Engage.jpg";
 import pic10 from "../images/Calll-of-Duty-Modern-Warfare-II.jpg"
+import pic11 from "../images/Mortal-Kombat-11-Ultimate.jpg"
 import { NewGameArticle } from "../features/games/games.d";
 
 export const newGamesArr: NewGameArticle[] = [
@@ -99,6 +100,15 @@ export const newGamesArr: NewGameArticle[] = [
         description: "The iconic squad of fearless soldiers are back in Call of Duty: Modern Warfare 2 on Xbox Series X. MW2 continues the gripping and adrenaline-rushing action as players fight to save the world from devastation. Experience the intense campaign and riveting gameplay in this epic, first-person shooter video game.",
         company: "New",
         price: 64.99,
+        isGettingBuied: false
+    },
+    {
+        id: "89433",
+        nameOfGame: "Mortal Kombat 11 Ultimate",
+        image: pic11,
+        description: "Show off your skills and hold many fatalities in Mortal Kombat 11 on PS4, the latest installment of this bone-crunching franchise. Choose between fighters like Baraka, Johnny Cage, Kitana, and more. Players are provided with a deeper and more personalized experience than ever before with an all-new Custom Character Variation System. This allows gamers to have the creative control to customize versions of the entire character roster. Developed by award-winning NetherRealm Studios, Mortal Kombat 11 will introduce a new cinematic story continuing the epic saga that is more than 25 years in the making.",
+        company: "New",
+        price: 18.99,
         isGettingBuied: false
     }
 ];

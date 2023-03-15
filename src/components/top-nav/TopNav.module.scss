@@ -1,29 +1,208 @@
-.navbar {
+.navWrapper {
     width: 100%;
     display: flex;
     flex-direction: row;
+    padding-top: 0;
+    justify-content: flex-end;
     align-items: center;
-    background-color: rgb(3, 19, 48);
 
     a {
         text-decoration: none;
         padding: 8px;
         margin: 30px;
         color: white;
-        border: 1px solid dodgerblue;
+        font-weight: bold;
         border-radius: 8px;
         transition: 0.5s;
+    }
+}
 
-        &:hover {
-            color: black;
-            background-color: rgb(37, 121, 205);
-            border: 1px solid white;
-        }
+.navWrapper a:hover {
+    color: rgb(37, 121, 205);
+}
+
+.navWrapper a.active {
+    color: rgb(37, 121, 205);
+}
+
+/* header.mobile-nav {
+    z-index: 10000
+}
+
+header.mobile-search {
+    background-color: #064b7a
+}
+
+header.mobile-search .logo {
+    margin-left: -140px
+} */
+
+
+/* @media (min-width:1200px) {
+    header.mobile-search {
+        background-color: #000
     }
 
-    .active {
-        color: black;
-        background-color: rgb(37, 121, 205);
-        border: 1px solid white;
+    header.mobile-search .logo {
+        margin-left: 0
+    }
+
+    header.mobile-search .nav-wrapper {
+        width: auto
+    }
+} */
+
+/* @media (min-width:1200px) {
+    header nav {
+        flex-direction: column
+    }
+} */
+
+/* @media (min-width:1200px) {
+    header .logo {
+        padding-top: 2px;
+        position: absolute;
+        top: 15px;
+        left: 19px
+    }
+} */
+
+/* header .logo img,
+header .logo svg {
+    width: 120px;
+    height: auto
+} */
+
+/* @media (min-width:1200px) {
+
+    header .logo img,
+    header .logo svg {
+        width: 90px;
+        height: auto
+    }
+} */
+
+@media (min-width:1200px) {
+    .navWrapper {
+        padding: 5px 20px 0 0
+    }
+}
+
+.navWrapper .dropdown:hover {
+    background-color: #09f;
+    color: #fff
+}
+
+.navWrapper .dropdown button {
+    background: none;
+    color: #fff;
+    border: none
+}
+
+header .navWrapper .dropdown button svg {
+    transition: -webkit-transform .15s ease;
+    transition: transform .15s ease;
+    transition: transform .15s ease, -webkit-transform .15s ease
+}
+
+header .navWrapper .dropdown button:after {
+    content: none !important
+}
+
+header .navWrapper .dropdown button:active,
+header .navWrapper .dropdown button:focus {
+    outline: none
+}
+
+header .navWrapper .dropdown button:hover {
+    color: #09f
+}
+
+header .navWrapper .dropdown button[aria-expanded=true] svg {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+header .navWrapper>.dropdown button,
+header .navWrapper>a:not(.btn) {
+    margin: 0 20px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    position: relative
+}
+
+header .navWrapper>.dropdown button svg.fa-external-link,
+header .navWrapper>a:not(.btn) svg.fa-external-link {
+    font-size: .5rem
+}
+
+header .navWrapper>.dropdown button:after,
+header .navWrapper>a:not(.btn):after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transition: all .2s ease
+}
+
+@media (min-width:1200px) {
+
+    header .navWrapper>.dropdown button:after,
+    header .navWrapper>a:not(.btn):after {
+        top: 35px
+    }
+}
+
+header .navWrapper>.dropdown button:hover:not(.dropdown button):after,
+header .navWrapper>a:not(.btn):hover:not(.dropdown button):after {
+    width: 100%;
+    left: 0;
+    background-color: #09f
+}
+
+header .navWrapper>.dropdown button.playtest,
+header .navWrapper>a:not(.btn).playtest {
+    margin: 0 15px 0 20px
+}
+
+header .navWrapper>.dropdown button.active,
+header .navWrapper>a:not(.btn).active {
+    color: #09f
+}
+
+header .navWrapper>.dropdown button.active:after,
+header .navWrapper>a:not(.btn).active:after {
+    mix-blend-mode: screen;
+    width: 100%;
+    background-color: #09f;
+    left: 0
+}
+
+@media (min-width:1200px) {
+
+    header .navWrapper>.dropdown button,
+    header .navWrapper>a:not(.btn) {
+        text-shadow: 0 0 6px #000
+    }
+}
+
+@media (min-width:992px) {
+    header .navWrapper a.btn {
+        margin: 0 0 0 5px;
+        font-size: .875rem;
+        letter-spacing: .075rem
+    }
+}
+
+@media (min-width:1200px) {
+    header .navWrapper a.btn {
+        margin: 0 0 0 25px
     }
 }

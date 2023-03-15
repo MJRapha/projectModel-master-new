@@ -22,11 +22,7 @@
 .deckOfCards {
     width: 100%;
     padding: 10px 5%;
-}
-
-.listCards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 2px;
 }
 
 .cardBody {
@@ -44,4 +40,8 @@
 
 .gameComingIn {
     color: white;
+}
+
+.my-component {
+    background-color: rgba(10, 8, 58, 0.913);
 }

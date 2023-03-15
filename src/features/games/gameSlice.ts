@@ -32,8 +32,21 @@ export const gameSlice = createSlice({
         },
         toggleBuying: (state, action: PayloadAction<string>) => {
             const index = state.articles.findIndex((a) => a.id === action.payload);
+            console.log(index);
+
             if (index !== -1) {
                 state.articles[index].isGettingBuied = !state.articles[index].isGettingBuied;
+            }
+        },
+        toggleBuied: (state, action: PayloadAction<string>) => {
+            console.log("=----------------------------> ", action.payload);
+
+            const index = state.articles.findIndex((a) => console.log(a.id)
+            );
+            console.log(index);
+
+            if (index !== -1) {
+                state.articles[index].isGettingBuied = state.articles[index].isGettingBuied = false;
             }
         },
         BuiedCard: (state, action: PayloadAction<string>) => {
@@ -49,5 +62,5 @@ export const gameSlice = createSlice({
 
 //export the reducer
 export default gameSlice.reducer
-export const { toggleBuying, BuiedCard } = gameSlice.actions
+export const { toggleBuying, BuiedCard, toggleBuied } = gameSlice.actions
 

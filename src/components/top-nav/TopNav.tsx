@@ -13,7 +13,7 @@ const TopNav = () => {
     return (
         <Navbar bg="dark" expand="lg">
             <Container>
-                <nav className={css.navbar}>
+                <nav className={css.navWrapper}>
                     {/* Brand: Logo + App Name */}
                     <NavLink to="/" className={activeClass}>
                         <span className="me-auto">Gaming Shop</span>
@@ -21,7 +21,7 @@ const TopNav = () => {
                         <BiJoystick />
                     </NavLink>
                     {/* Burger: */}
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle className="dropdown" aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <NavLink className={activeClass} to="/games">Games</NavLink>
