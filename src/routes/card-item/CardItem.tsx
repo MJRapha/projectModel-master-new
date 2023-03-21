@@ -22,16 +22,24 @@ export function CardItem({ id, quantity }: CardItemProps) {
     const { removeFromCart } = useShoppingCart()
 
     const nintendoItem = nintendoGamesArr.find(i => i.id === id)
-    if (nintendoItem == null) return null
+    if (nintendoItem == null) {
+        return null
+    }
 
     const xboxItem = xboxGamesArr.find(i => i.id === id)
-    if (xboxItem == null) return null
+    if (xboxItem == null) {
+        return null
+    }
 
     const psItem = psGamesArr.find(i => i.id === id)
-    if (psItem == null) return null
+    if (psItem == null) {
+        return null
+    }
 
     const newGameItem = newGamesArr.find(i => i.id === id)
-    if (newGameItem == null) return null
+    if (newGameItem == null) {
+        return null
+    }
 
     return (
         <>
@@ -71,7 +79,7 @@ export function CardItem({ id, quantity }: CardItemProps) {
                                 <div className="me-auto">
                                     <div>
                                         {xboxItem.nameOfGame} {quantity > 1 && (
-                                            <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
+                                            <span className="text-muted" style={{ fontSize: ".65rem"/* , color: "white" */ }}>
                                                 {quantity}x
                                             </span>
                                         )}
@@ -94,7 +102,7 @@ export function CardItem({ id, quantity }: CardItemProps) {
                                 <div className="me-auto">
                                     <div>
                                         {psItem.nameOfGame} {quantity > 1 && (
-                                            <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
+                                            <span className="text-muted" style={{ fontSize: ".65rem"/* , color: "white" */ }}>
                                                 {quantity}x
                                             </span>
                                         )}
@@ -117,7 +125,7 @@ export function CardItem({ id, quantity }: CardItemProps) {
                                 <div className="me-auto">
                                     <div>
                                         {newGameItem.nameOfGame} {quantity > 1 && (
-                                            <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
+                                            <span className="text-muted" style={{ fontSize: ".65rem"/* , color: "white" */ }}>
                                                 {quantity}x
                                             </span>
                                         )}
