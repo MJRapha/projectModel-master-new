@@ -10,18 +10,6 @@ const initialState: GameArticles = {
     articles: newGamesArr,
 };
 
-/* interface GameArticles {
-    loading: boolean,
-    error: string,
-    articles: [],
-}
-
-const initialState: GameArticles = {
-    loading: false,
-    error: "",
-    articles: [],
-}; */
-
 export const gameSlice = createSlice({
     name: "cards",
     initialState,
@@ -30,31 +18,13 @@ export const gameSlice = createSlice({
         addCard: (state, action: PayloadAction<NewGameArticle>) => {
             state.articles.push(action.payload);
         },
-        toggleBuying: (state, action: PayloadAction<string>) => {
+        toggleBuying: (state, action: PayloadAction<number>) => {
             const index = state.articles.findIndex((a) => a.id === action.payload);
             console.log(index);
 
             if (index !== -1) {
-                state.articles[index].isGettingBuied = !state.articles[index].isGettingBuied;
+
             }
-        },
-        toggleBuied: (state, action: PayloadAction<string>) => {
-            console.log("=----------------------------> ", action.payload);
-
-            const index = state.articles.findIndex((a) => console.log(a.id)
-            );
-            console.log(index);
-
-            if (index !== -1) {
-                state.articles[index].isGettingBuied = state.articles[index].isGettingBuied = false;
-            }
-        },
-        BuiedCard: (state, action: PayloadAction<string>) => {
-            //action.payload = id of the card to remove
-            const index = state.articles.findIndex((c) => c.id === action.payload);
-
-            //delete the card at index:
-            state.articles.splice(index, 1);
         },
     },
 });
@@ -62,5 +32,5 @@ export const gameSlice = createSlice({
 
 //export the reducer
 export default gameSlice.reducer
-export const { toggleBuying, BuiedCard, toggleBuied } = gameSlice.actions
+export const { toggleBuying } = gameSlice.actions
 

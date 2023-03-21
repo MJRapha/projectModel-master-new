@@ -1,11 +1,11 @@
-import { BuiedNintendoCard } from '../../features/games/gameNintendoSlice';
+/* import { BuiedNintendoCard } from '../../features/games/gameNintendoSlice'; */
 import { NintendoGameArticle } from '../../features/games/games';
-import { useAppDispatch } from '../../app/hooks';
+/* import { useAppDispatch } from '../../app/hooks'; */
 
 const NintendoGamesPart = (props: NintendoGameArticle) => {
-    const dispatch = useAppDispatch();
+    /* const dispatch = useAppDispatch(); */
     const buy = () => {
-        dispatch(BuiedNintendoCard(props.id));
+        /* dispatch(BuiedNintendoCard(props.id)); */
     }
     return (
         <>

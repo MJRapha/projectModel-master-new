@@ -30,13 +30,13 @@ export const gameSlice = createSlice({
         addCard: (state, action: PayloadAction<XboxGameArticle>) => {
             state.Xarticles.push(action.payload);
         },
-        toggleBuying: (state, action: PayloadAction<string>) => {
+        toggleBuying: (state, action: PayloadAction<number>) => {
             const index = state.Xarticles.findIndex((a) => a.id === action.payload);
             if (index !== -1) {
-                state.Xarticles[index].isGettingBuied = !state.Xarticles[index].isGettingBuied;
+
             }
         },
-        BuiedXboxCard: (state, action: PayloadAction<string>) => {
+        BuiedXboxCard: (state, action: PayloadAction<number>) => {
             //action.payload = id of the card to remove
             const index = state.Xarticles.findIndex((c) => c.id === action.payload);
 

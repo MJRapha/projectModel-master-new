@@ -1,6 +1,6 @@
 import css from './About.module.scss'
 
-function About() {
+const About = () => {
     return (
         <>
             <div className={css.myComponent}>

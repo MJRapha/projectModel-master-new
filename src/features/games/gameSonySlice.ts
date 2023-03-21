@@ -31,13 +31,13 @@ export const gameSlice = createSlice({
         addCard: (state, action: PayloadAction<SonyGameArticle>) => {
             state.PSarticles.push(action.payload);
         },
-        toggleBuying: (state, action: PayloadAction<string>) => {
+        toggleBuying: (state, action: PayloadAction<number>) => {
             const index = state.PSarticles.findIndex((a) => a.id === action.payload);
             if (index !== -1) {
-                state.PSarticles[index].isGettingBuied = !state.PSarticles[index].isGettingBuied;
+
             }
         },
-        BuiedSonyCard: (state, action: PayloadAction<string>) => {
+        BuiedSonyCard: (state, action: PayloadAction<number>) => {
             //action.payload = id of the card to remove
             const index = state.PSarticles.findIndex((c) => c.id === action.payload);
 

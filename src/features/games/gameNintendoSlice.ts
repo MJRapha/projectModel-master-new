@@ -30,13 +30,13 @@ export const gameSlice = createSlice({
         addCard: (state, action: PayloadAction<NintendoGameArticle>) => {
             state.Narticles.push(action.payload);
         },
-        toggleBuying: (state, action: PayloadAction<string>) => {
+        toggleBuying: (state, action: PayloadAction<number>) => {
             const index = state.Narticles.findIndex((a) => a.id === action.payload);
             if (index !== -1) {
-                state.Narticles[index].isGettingBuied = !state.Narticles[index].isGettingBuied;
+
             }
         },
-        BuiedNintendoCard: (state, action: PayloadAction<string>) => {
+        BuiedNintendoCard: (state, action: PayloadAction<number>) => {
             //action.payload = id of the card to remove
             const index = state.Narticles.findIndex((c) => c.id === action.payload);
 

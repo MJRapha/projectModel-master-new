@@ -8,8 +8,9 @@ const Games = () => {
     //const { articles, error, loading } = useAppSelector((state) => state.games);
     return (
         <>
+            <GamesNav />
             <div className="my-component">
-                <GamesNav />
+
                 <Outlet />
             </div>
         </>

@@ -1,11 +1,11 @@
-import { BuiedXboxCard } from '../../features/games/gameXboxSlice';
+/* import { BuiedXboxCard } from '../../features/games/gameXboxSlice'; */
 import { XboxGameArticle } from '../../features/games/games';
-import { useAppDispatch } from '../../app/hooks';
+/* import { useAppDispatch } from '../../app/hooks'; */
 
 const XboxGamesPart = (props: XboxGameArticle) => {
-    const dispatch = useAppDispatch();
+    /* const dispatch = useAppDispatch(); */
     const buy = () => {
-        dispatch(BuiedXboxCard(props.id));
+        /* dispatch(BuiedXboxCard(props.id)); */
     }
     return (
         <>
