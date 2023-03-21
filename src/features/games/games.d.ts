@@ -4,7 +4,7 @@ export type NewGameArticle = {
     description: string;
     company: string;
     image: string;
-    price?: number;
+    price: number;
 }
 export type XboxGameArticle = {
     id: number;
@@ -12,7 +12,7 @@ export type XboxGameArticle = {
     description: string;
     company: string;
     image: string;
-    price?: number;
+    price: number;
 }
 export type NintendoGameArticle = {
     id: number;
@@ -20,7 +20,7 @@ export type NintendoGameArticle = {
     description: string;
     company: string;
     image: string;
-    price?: number;
+    price: number;
 }
 export type SonyGameArticle = {
     id: number;
@@ -28,7 +28,7 @@ export type SonyGameArticle = {
     description: string;
     company: string;
     image: string;
-    price?: number;
+    price: number;
 }
 export type SoonGameArticle = {
     id: string;

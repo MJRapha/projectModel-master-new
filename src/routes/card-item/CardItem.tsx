@@ -1,19 +1,19 @@
 import { Fragment } from "react"
-import { Stack } from "react-bootstrap"
+import { Button, Stack } from "react-bootstrap"
 import { newGamesArr } from "../../api/newGamesArr"
 import { nintendoGamesArr } from "../../api/nintendoGames"
 import { psGamesArr } from "../../api/psGames"
 import { xboxGamesArr } from "../../api/xboxGames"
 import { useAppSelector } from "../../app/hooks"
 import { useShoppingCart } from "../../context/ShoppingCartContext"
+import { formatCurrency } from "../../utilities/formatCurrency"
 
 type CardItemProps = {
     id: number
     quantity: number
 }
 
-const CardItem = ({ id, quantity }: CardItemProps) => {
-
+export function CardItem({ id, quantity }: CardItemProps) {
     const { Narticles } = useAppSelector((state) => state.NintendoGames);
     const { Xarticles } = useAppSelector((state) => state.XboxGames);
     const { PSarticles } = useAppSelector((state) => state.PSGames);
@@ -40,30 +40,102 @@ const CardItem = ({ id, quantity }: CardItemProps) => {
                     {
                         (
                             a.company === 'Nintendo' &&
-                            <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+                            <Stack direction="horizontal" gap={2} className="d-flex align-items-center" >
                                 <img src={nintendoItem.image} alt=""
                                     style={{ width: "125px", height: "75px", objectFit: "cover" }}
                                 />
                                 <div className="me-auto">
                                     <div>
                                         {nintendoItem.nameOfGame} {quantity > 1 && (
+                                            <span className="text-muted" style={{ fontSize: ".65rem"/* , color: "white" */ }}>
+                                                {quantity}x
+                                            </span>
+                                        )}
+                                    </div>
+                                    <div className="text-muted" style={{ fontSize: ".75rem" }}>
+                                        {formatCurrency(nintendoItem.price)}
+                                    </div>
+                                </div>
+                                <div>{formatCurrency(nintendoItem.price * quantity)}</div>
+                                <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(nintendoItem.id)}>
+                                    &times;
+                                </Button>
+                            </Stack>
+                        )
+                        ||
+                        (a.company === 'X-Box' &&
+                            <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+                                <img src={xboxItem.image} alt=""
+                                    style={{ width: "125px", height: "75px", objectFit: "cover" }}
+                                />
+                                <div className="me-auto">
+                                    <div>
+                                        {xboxItem.nameOfGame} {quantity > 1 && (
                                             <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
                                                 {quantity}x
                                             </span>
                                         )}
                                     </div>
+                                    <div className="text-muted" style={{ fontSize: ".75rem" }}>
+                                        {formatCurrency(xboxItem.price)}
+                                    </div>
                                 </div>
+                                <div>{formatCurrency(xboxItem.price * quantity)}</div>
+                                <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(xboxItem.id)}>
+                                    &times;
+                                </Button>
+                            </Stack>
+                        ) ||
+                        (a.company === 'Sony Playstation' &&
+                            <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+                                <img src={psItem.image} alt=""
+                                    style={{ width: "125px", height: "75px", objectFit: "cover" }}
+                                />
+                                <div className="me-auto">
+                                    <div>
+                                        {psItem.nameOfGame} {quantity > 1 && (
+                                            <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
+                                                {quantity}x
+                                            </span>
+                                        )}
+                                    </div>
+                                    <div className="text-muted" style={{ fontSize: ".75rem" }}>
+                                        {formatCurrency(psItem.price)}
+                                    </div>
+                                </div>
+                                <div>{formatCurrency(psItem.price * quantity)}</div>
+                                <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(psItem.id)}>
+                                    &times;
+                                </Button>
+                            </Stack>
+                        ) ||
+                        (a.company === 'New' &&
+                            <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+                                <img src={newGameItem.image} alt=""
+                                    style={{ width: "125px", height: "75px", objectFit: "cover" }}
+                                />
+                                <div className="me-auto">
+                                    <div>
+                                        {newGameItem.nameOfGame} {quantity > 1 && (
+                                            <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
+                                                {quantity}x
+                                            </span>
+                                        )}
+                                    </div>
+                                    <div className="text-muted" style={{ fontSize: ".75rem" }}>
+                                        {formatCurrency(newGameItem.price)}
+                                    </div>
+                                </div>
+                                <div>{formatCurrency(newGameItem.price * quantity)}</div>
+                                <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(newGameItem.id)}>
+                                    &times;
+                                </Button>
                             </Stack>
                         )
-                        /* ||
-                    (a.company === 'X-Box') ||
-                    (a.company === 'Sony Playstation') ||
-                    (a.company === 'New') */
                     }
                 </Fragment>
-            ))}
+            ))
+            }
         </>
     )
 }
-
-export default CardItem
