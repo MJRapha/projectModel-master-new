@@ -5,6 +5,7 @@ export type NewGameArticle = {
     company: string;
     image: string;
     price: number;
+    item?: any;
 }
 export type XboxGameArticle = {
     id: number;

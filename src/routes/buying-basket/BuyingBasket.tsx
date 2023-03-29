@@ -5,7 +5,7 @@ import { nintendoGamesArr } from '../../api/nintendoGames';
 import { xboxGamesArr } from '../../api/xboxGames';
 import { psGamesArr } from '../../api/psGames';
 import { newGamesArr } from '../../api/newGamesArr';
-import { CardItem } from '../card-item/CardItem';
+import { CartItem } from '../../components/card-item/CartItem';
 import AnimatedCart from '../../Containers/animated-pages/AnimatedCart';
 
 type ShoppingCartProps = {
@@ -14,7 +14,7 @@ type ShoppingCartProps = {
 
 
 const BuyingBasket = ({ isOpen }: ShoppingCartProps) => {
-    const { closeCart, cartItems } = useShoppingCart()
+    const { closeCart, cartItems, cartItemData } = useShoppingCart()
     console.log(cartItems)
     return (
         <Offcanvas show={isOpen} onHide={closeCart} placement="end" style={{ backgroundColor: "rgba(0, 0, 0, .6)" }}>
@@ -27,9 +27,15 @@ const BuyingBasket = ({ isOpen }: ShoppingCartProps) => {
                 <Offcanvas.Body>
                     <Stack gap={3}>
                         {cartItems.map(item => (
-                            <CardItem key={item.id} {...item} />
+                            <CartItem key={item.id} {...item} />
                         ))}
-
+                        <div>
+                            {
+                                cartItemData.map(item =>
+                                    <p>{item.name}</p>
+                                )
+                            }
+                        </div>
                         <div className="ms-auto fw-bold fs-5" style={{ color: "white" }}>
                             Total {formatCurrency(cartItems.reduce((total, CardItem) => {
                                 const nintendoItem = nintendoGamesArr.find(i => i.id === CardItem.id)

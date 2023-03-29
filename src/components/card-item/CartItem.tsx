@@ -12,11 +12,9 @@ import { formatCurrency } from "../../utilities/formatCurrency"
 type CardItemProps = {
     id: number
     quantity: number
-    nameOfGame?: string
-
 }
 
-export function CardItem({ id, quantity, nameOfGame }: CardItemProps) {
+export function CartItem({ id, quantity }: CardItemProps) {
     const { Narticles } = useAppSelector((state) => state.NintendoGames);
     const { Xarticles } = useAppSelector((state) => state.XboxGames);
     const { PSarticles } = useAppSelector((state) => state.PSGames);
@@ -52,27 +50,25 @@ export function CardItem({ id, quantity, nameOfGame }: CardItemProps) {
                     {
                         (
                             a.company === 'Nintendo' &&
-                            <motion.div>
-                                <Stack direction="horizontal" gap={2} className="d-flex align-items-center" >
-                                    <div className="me-auto">
-                                        <div>{a.nameOfGame}</div>
-                                        <div>
-                                            {nintendoItem.nameOfGame} {quantity > 1 && (
-                                                <span className="text-muted" style={{ fontSize: ".65rem"/* , color: "white" */ }}>
-                                                    {quantity}x
-                                                </span>
-                                            )}
-                                        </div>
-                                        <div className="text-muted" style={{ fontSize: ".75rem" }}>
-                                            {formatCurrency(nintendoItem.price)}
-                                        </div>
+                            <Stack direction="horizontal" gap={2} className="d-flex align-items-center" >
+                                <div className="me-auto">
+                                    <div>{a.nameOfGame}</div>
+                                    <div>
+                                        {nintendoItem.nameOfGame} {quantity > 1 && (
+                                            <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
+                                                {quantity}x
+                                            </span>
+                                        )}
                                     </div>
-                                    <div>{formatCurrency(nintendoItem.price * quantity)}</div>
-                                    <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(nintendoItem.id)}>
-                                        &times;
-                                    </Button>
-                                </Stack>
-                            </motion.div>
+                                    <div className="text-muted" style={{ fontSize: ".75rem" }}>
+                                        {formatCurrency(nintendoItem.price)}
+                                    </div>
+                                </div>
+                                <div>{formatCurrency(nintendoItem.price * quantity)}</div>
+                                <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(nintendoItem.id)}>
+                                    &times;
+                                </Button>
+                            </Stack>
                         )
                         ||
                         (a.company === 'X-Box' &&
@@ -81,7 +77,7 @@ export function CardItem({ id, quantity, nameOfGame }: CardItemProps) {
                                     <div className="me-auto">
                                         <div>
                                             {xboxItem.nameOfGame} {quantity > 1 && (
-                                                <span className="text-muted" style={{ fontSize: ".65rem"/* , color: "white" */ }}>
+                                                <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
                                                     {quantity}x
                                                 </span>
                                             )}
@@ -103,7 +99,7 @@ export function CardItem({ id, quantity, nameOfGame }: CardItemProps) {
                                     <div className="me-auto">
                                         <h3>
                                             {psItem.nameOfGame} {quantity > 1 && (
-                                                <span className="text-muted" style={{ fontSize: ".65rem"/* , color: "white" */ }}>
+                                                <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
                                                     {quantity}x
                                                 </span>
                                             )}
@@ -125,7 +121,7 @@ export function CardItem({ id, quantity, nameOfGame }: CardItemProps) {
                                     <div className="me-auto">
                                         <div>
                                             {newGameItem.nameOfGame} {quantity > 1 && (
-                                                <span className="text-muted" style={{ fontSize: ".65rem"/* , color: "white" */ }}>
+                                                <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
                                                     {quantity}x
                                                 </span>
                                             )}
