@@ -1,20 +1,20 @@
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Button, Dropdown } from "react-bootstrap";
 import { NewGamesItemProps } from "../../@types/types";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import css from './GameItem.module.scss'
 
-const NewGameItem = ({ nameOfGame, image, id, price }: NewGamesItemProps) => {
+const NewGameItem = ({ nameOfGame, image, id, price, description }: NewGamesItemProps) => {
     const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart()
     const quantity = getItemQuantity(id)
     return (
-        <div className={css.deckOfCards} >
-            <div className="w-75 m-1 shadow-lg border-light border-5 rounded d-flex flex-column align-items-center">
-                <img className="w-50 shadow-lg bg-white rounded card" src={image} alt="Card cap" style={{
+        <div className="d-flex flex-column border border-dark rounded w-25">
+            <img className={css.gameImg}
+                src={image} alt="Card cap" style={{
                     objectFit:
                         "cover"
                 }} />
-                <div className="fs-2 m-2">
+            <div style={{ backgroundColor: "black", width: "100%" }}>
+                <div className="m-2">
                     <h5 className={css.gameName}>{nameOfGame}</h5>
                 </div>
                 <div className="ms-2 text-muted">
@@ -34,9 +34,15 @@ const NewGameItem = ({ nameOfGame, image, id, price }: NewGamesItemProps) => {
                         </div>
                     )}
                 </div>
-                <Link className={css.link} to={`games/new/${id}`}>
-                    Read More
-                </Link>
+                <Dropdown>
+                    <Dropdown.Toggle className={css.link} variant="success" id="dropdown-basic">
+                        Read More
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu style={{ backgroundColor: "rgba(10, 8, 58, 0.913)", width: "350px" }}>
+                        <Dropdown.ItemText className={css.p} >{description}</Dropdown.ItemText>
+                    </Dropdown.Menu>
+                </Dropdown>
             </div>
         </div>
     )

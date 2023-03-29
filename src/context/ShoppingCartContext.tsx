@@ -8,7 +8,8 @@ type ShoppingCartProviderProps = {
 
 type CartItem = {
     id: number,
-    quantity: number
+    quantity: number,
+    nameOfGame?: string
 }
 
 type ShoppingCartContexT = {

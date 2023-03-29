@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 //import { useAppSelector } from '../../app/hooks';
 import GamesNav from '../../components/games-nav/GamesNav';
-import './GameItem.module.scss';
+//import css from './GameItem.module.scss';
 //import GameItem from './GameItem';
 
 const Games = () => {
@@ -9,8 +9,10 @@ const Games = () => {
     return (
         <>
             <GamesNav />
-            <div className="my-component">
-
+            {/* <div className={css.myComponent}>
+                <div className={css.askToChoose}>Choose which category you want to see</div>
+            </div> */}
+            <div className="w-100">
                 <Outlet />
             </div>
         </>

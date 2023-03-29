@@ -23,23 +23,23 @@ function Contact() {
     return (
         <div className={css.myComponent}>
             <div className="container mt-5">
-                <h2 className="mb-3">Contact</h2>
+                <h2 className="mb-3" style={{ color: "white", textDecoration: "underline" }}>Contact</h2>
                 <form onSubmit={onSubmit}>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor="name">
-                            Name
+                        <label className="form-label" htmlFor="name" style={{ color: "white", textDecoration: "underline" }}>
+                            Name:
                         </label>
                         <input className="form-control" type="text" id="name" required />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor="email">
-                            Email
+                        <label className="form-label" htmlFor="email" style={{ color: "white", textDecoration: "underline" }}>
+                            Email:
                         </label>
                         <input className="form-control" type="email" id="email" required />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor="message">
-                            Message
+                        <label className="form-label" htmlFor="message" style={{ color: "white", textDecoration: "underline" }}>
+                            Message:
                         </label>
                         <textarea className="form-control" id="message" required />
                     </div>
@@ -49,7 +49,7 @@ function Contact() {
                 </form>
 
                 <div>
-                    {textMessage && <span>{textMessage}</span>}
+                    {textMessage && <span style={{ color: "white" }}>{textMessage}</span>}
                 </div>
             </div>
         </div>

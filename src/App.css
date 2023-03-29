@@ -4,6 +4,7 @@
 
 .my-component {
   background-color: rgba(10, 8, 58, 0.913);
+  width: 100%;
 }
 
 .App-logo {

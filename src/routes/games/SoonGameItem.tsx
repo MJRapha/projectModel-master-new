@@ -1,26 +1,34 @@
-import { Link } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
 import { SoonGamesItemProps } from "../../@types/types";
 import css from './GameItem.module.scss'
 
-const GameItem = ({ nameOfGame, image, id, comingSoon }: SoonGamesItemProps) => {
+const GameItem = ({ nameOfGame, image, description, comingSoon }: SoonGamesItemProps) => {
     return (
-        <div className={css.deckOfCards} >
-            <div className="w-100 m-1 shadow-lg border-light border-5 rounded d-flex flex-column align-items-center">
-                <img className="w-50 shadow-lg bg-white rounded card" src={image} alt="Card cap" style={{
-                    objectFit:
-                        "cover"
-                }} />
-                <div className="m-2">
-                    <h5 className={css.gameName}>{nameOfGame}</h5>
+        <>
+            <div className={css.deckOfCards} >
+                <div className="w-100 m-1 shadow-lg border-light border-5 rounded d-flex flex-column align-items-center">
+                    <img className="w-50 shadow-lg bg-white rounded card" src={image} alt="Card cap" style={{
+                        objectFit:
+                            "cover"
+                    }} />
+                    <div className="m-2">
+                        <h5 className={css.gameName}>{nameOfGame}</h5>
+                    </div>
+                    <div className="ms-2 text-muted">
+                        <h6 className={css.gameComingIn}>{comingSoon}</h6>
+                    </div>
+                    <Dropdown>
+                        <Dropdown.Toggle className={css.link} variant="success" id="dropdown-basic">
+                            Read More
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu style={{ backgroundColor: "rgba(10, 8, 58, 0.913)", width: "350px" }}>
+                            <Dropdown.ItemText className={css.p} >{description}</Dropdown.ItemText>
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </div>
-                <div className="ms-2 text-muted">
-                    <h6 className={css.gameComingIn}>{comingSoon}</h6>
-                </div>
-                <Link className={css.link} to={`games/soon/${id}`}>
-                    Read More
-                </Link>
             </div>
-        </div>
+        </>
     )
 }
 

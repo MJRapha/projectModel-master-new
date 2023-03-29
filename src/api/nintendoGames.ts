@@ -1,6 +1,6 @@
 import pic1 from "../images/sonic-frontiers.jpg";
-import pic2 from "../images/pokemon-scarlet.jpg";
-import pic3 from "../images/pokemon-violet.jpg";
+import pic2 from "../images/scarlet-violet.jpg";
+import pic3 from "../images/scarlet-violet.jpg";
 import pic4 from "../images/bayonetta3.jpg";
 import pic5 from "../images/splatoon3.jpg";
 import pic6 from "../images/mario-strikers.jpg";
@@ -21,7 +21,7 @@ export const nintendoGamesArr: NintendoGameArticle[] = [
     },
     {
         id: 14622,
-        nameOfGame: "Pokemon Scarlet",
+        nameOfGame: "Pokemon Scarlet(Only Scarlet)",
         image: pic2,
         description: "Catch, battle, and train Pokémon in the Paldea Region, a vast land filled with lakes, towering peaks, wastelands, small towns, and sprawling cities. Explore a wide-open world at your own pace and traverse land, water, and air by riding on a form-shifting Legendary Pokémon—Koraidon in Pokémon Scarlet and Miraidon in Pokémon Violet. Choose either Sprigatito, Fuecoco, or Quaxly, to be your first partner Pokémon before setting off on your journey through Paldea.",
         company: "Nintendo",
@@ -29,7 +29,7 @@ export const nintendoGamesArr: NintendoGameArticle[] = [
     },
     {
         id: 14623,
-        nameOfGame: "Pokemon Voilet",
+        nameOfGame: "Pokemon Voilet(Only Voilet)",
         image: pic3,
         description: "Catch, battle, and train Pokémon in the Paldea Region, a vast land filled with lakes, towering peaks, wastelands, small towns, and sprawling cities. Explore a wide-open world at your own pace and traverse land, water, and air by riding on a form-shifting Legendary Pokémon—Koraidon in Pokémon Scarlet and Miraidon in Pokémon Violet. Choose either Sprigatito, Fuecoco, or Quaxly, to be your first partner Pokémon before setting off on your journey through Paldea.",
         company: "Nintendo",

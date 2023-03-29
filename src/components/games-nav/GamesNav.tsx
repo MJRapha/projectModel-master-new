@@ -8,9 +8,9 @@ const GamesNav = () => {
     const activeClass = (e: IsActiveProps, clz: string = "") =>
         e.isActive ? `${css.active} ${clz}` : clz;
     return (
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="dark" expand="lg" style={{ zIndex: "1" }}>
             <Container>
-                <nav className={css.navbar}>
+                <nav className={css.navWrapper}>
                     <NavLink className={activeClass} to="nintendo">
                         Nintendo
                     </NavLink>

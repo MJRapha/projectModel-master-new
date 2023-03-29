@@ -1,16 +1,22 @@
 .text {
     color: white;
     text-align: center;
+    margin: 30px;
+    text-decoration: underline;
 }
 
 .p {
-    font-size: x-large;
+    font-size: large;
     font-weight: bolder;
-    margin-bottom: 1rem;
+    margin: 30px;
     color: white;
 }
 
 .myComponent {
     background-color: rgba(10, 8, 58, 0.913);
-    background-size: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
