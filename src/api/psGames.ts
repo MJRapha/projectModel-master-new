@@ -119,15 +119,3 @@ export const psGamesArr: SonyGameArticle[] = [
         price: 22.99
     }
 ];
-
-/* export const fetchArticles = () =>
-    fetch(psGamesArr)
-        .then((res) => res.json())
-        .then((json) => json.articles as GameArticle[])
-        .then((articles) => {
-            articles.forEach((a) => {
-                a.id = v4();
-                a.isGettingBuied = false
-            });
-            return articles;
-        }); */

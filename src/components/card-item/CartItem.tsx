@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import { Fragment } from "react"
 import { Button, Stack } from "react-bootstrap"
 import { newGamesArr } from "../../api/newGamesArr"
@@ -14,7 +13,7 @@ type CardItemProps = {
     quantity: number
 }
 
-export function CartItem({ id, quantity }: CardItemProps) {
+const CartItem = ({ id, quantity }: CardItemProps) => {
     const { Narticles } = useAppSelector((state) => state.NintendoGames);
     const { Xarticles } = useAppSelector((state) => state.XboxGames);
     const { PSarticles } = useAppSelector((state) => state.PSGames);
@@ -72,70 +71,64 @@ export function CartItem({ id, quantity }: CardItemProps) {
                         )
                         ||
                         (a.company === 'X-Box' &&
-                            <motion.div>
-                                <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
-                                    <div className="me-auto">
-                                        <div>
-                                            {xboxItem.nameOfGame} {quantity > 1 && (
-                                                <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
-                                                    {quantity}x
-                                                </span>
-                                            )}
-                                        </div>
-                                        <div className="text-muted" style={{ fontSize: ".75rem" }}>
-                                            {formatCurrency(xboxItem.price)}
-                                        </div>
+                            <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+                                <div className="me-auto">
+                                    <div>
+                                        {xboxItem.nameOfGame} {quantity > 1 && (
+                                            <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
+                                                {quantity}x
+                                            </span>
+                                        )}
                                     </div>
-                                    <div>{formatCurrency(xboxItem.price * quantity)}</div>
-                                    <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(xboxItem.id)}>
-                                        &times;
-                                    </Button>
-                                </Stack>
-                            </motion.div>
+                                    <div className="text-muted" style={{ fontSize: ".75rem" }}>
+                                        {formatCurrency(xboxItem.price)}
+                                    </div>
+                                </div>
+                                <div>{formatCurrency(xboxItem.price * quantity)}</div>
+                                <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(xboxItem.id)}>
+                                    &times;
+                                </Button>
+                            </Stack>
                         ) ||
                         (a.company === 'Sony Playstation' &&
-                            <motion.div>
-                                <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
-                                    <div className="me-auto">
-                                        <h3>
-                                            {psItem.nameOfGame} {quantity > 1 && (
-                                                <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
-                                                    {quantity}x
-                                                </span>
-                                            )}
-                                        </h3>
-                                        <div className="text-muted" style={{ fontSize: ".75rem" }}>
-                                            {formatCurrency(psItem.price)}
-                                        </div>
+                            <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+                                <div className="me-auto">
+                                    <h3>
+                                        {psItem.nameOfGame} {quantity > 1 && (
+                                            <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
+                                                {quantity}x
+                                            </span>
+                                        )}
+                                    </h3>
+                                    <div className="text-muted" style={{ fontSize: ".75rem" }}>
+                                        {formatCurrency(psItem.price)}
                                     </div>
-                                    <div>{formatCurrency(psItem.price * quantity)}</div>
-                                    <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(psItem.id)}>
-                                        &times;
-                                    </Button>
-                                </Stack>
-                            </motion.div>
+                                </div>
+                                <div>{formatCurrency(psItem.price * quantity)}</div>
+                                <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(psItem.id)}>
+                                    &times;
+                                </Button>
+                            </Stack>
                         ) ||
                         (a.company === 'New' &&
-                            <motion.div>
-                                <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
-                                    <div className="me-auto">
-                                        <div>
-                                            {newGameItem.nameOfGame} {quantity > 1 && (
-                                                <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
-                                                    {quantity}x
-                                                </span>
-                                            )}
-                                        </div>
-                                        <div className="text-muted" style={{ fontSize: ".75rem" }}>
-                                            {formatCurrency(newGameItem.price)}
-                                        </div>
+                            <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+                                <div className="me-auto">
+                                    <div>
+                                        {newGameItem.nameOfGame} {quantity > 1 && (
+                                            <span className="text-muted" style={{ fontSize: ".65rem", color: "white" }}>
+                                                {quantity}x
+                                            </span>
+                                        )}
                                     </div>
-                                    <div>{formatCurrency(newGameItem.price * quantity)}</div>
-                                    <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(newGameItem.id)}>
-                                        &times;
-                                    </Button>
-                                </Stack>
-                            </motion.div>
+                                    <div className="text-muted" style={{ fontSize: ".75rem" }}>
+                                        {formatCurrency(newGameItem.price)}
+                                    </div>
+                                </div>
+                                <div>{formatCurrency(newGameItem.price * quantity)}</div>
+                                <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(newGameItem.id)}>
+                                    &times;
+                                </Button>
+                            </Stack>
                         )
                     }
                 </Fragment>
@@ -144,3 +137,5 @@ export function CartItem({ id, quantity }: CardItemProps) {
         </>
     )
 }
+
+export default CartItem;

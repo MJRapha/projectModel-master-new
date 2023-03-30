@@ -3,11 +3,11 @@ import { NewGamesItemProps } from "../../@types/types";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import css from './GameItem.module.scss'
 
-const NewGameItem = ({ nameOfGame, image, id, price, description, item }: NewGamesItemProps) => {
-    const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, shoppingCartItems } = useShoppingCart()
+const NewGameItem = ({ nameOfGame, image, id, price, description }: NewGamesItemProps) => {
+    const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart()
     const quantity = getItemQuantity(id)
     return (
-        <div className="d-flex flex-column border border-dark rounded w-25">
+        <div className="d-flex flex-column border-5 border-dark rounded w-100">
             <img className={css.gameImg}
                 src={image} alt="Card cap" style={{
                     objectFit:
@@ -28,10 +28,7 @@ const NewGameItem = ({ nameOfGame, image, id, price, description, item }: NewGam
                             <div className="d-flex align-items-center justify-content-center" style={{ gap: ".5rem", color: "white" }}>
                                 <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                                 <span className="fs-3" style={{ color: "white" }}>{quantity}</span> in Basket
-                                <Button onClick={() => {
-                                    increaseCartQuantity(id)
-                                    shoppingCartItems({ nameOfGame, id })
-                                }}>+</Button>
+                                <Button onClick={() => increaseCartQuantity(id)}>+</Button>
                             </div>
                             <Button onClick={() => removeFromCart(id)} variant="danger" size="sm">cancel</Button>
                         </div>

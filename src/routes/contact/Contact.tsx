@@ -1,11 +1,7 @@
 import { useState } from 'react'
-//import { IsActiveProps } from '../../@types/types'
 import css from './Contact.module.scss'
 
 function Contact() {
-    /* const activeClass = (e: IsActiveProps, clz: string = "") =>
-        e.isActive ? `${css.active} ${clz}` : clz; */
-    //const [name, setName] = useState('')
     const [formStatus, setFormStatus] = useState('Send')
     const [textMessage, setTextMessage] = useState('')
     const onSubmit = (e: any) => {

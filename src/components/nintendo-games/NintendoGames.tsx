@@ -9,9 +9,6 @@ const NintendoGames = () => {
             {nintendoGames.map((g) => (
                 <NintendoGameItem {...g} key={g.id} />
             ))}
-            {/* {[1, 2, 3, 4, 5, 6].map((n) => (
-                <div>paragraph{n}</div>
-            ))} */}
         </div>
     )
 }

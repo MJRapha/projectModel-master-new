@@ -10,18 +10,6 @@ const initialState: GameArticles = {
     Xarticles: xboxGamesArr,
 };
 
-/* interface GameArticles {
-    loading: boolean,
-    error: string,
-    articles: [],
-}
-
-const initialState: GameArticles = {
-    loading: false,
-    error: "",
-    articles: [],
-}; */
-
 export const gameSlice = createSlice({
     name: "cards",
     initialState,
@@ -29,25 +17,11 @@ export const gameSlice = createSlice({
         // אילו פעולות אנו רוצים בחנות
         addCard: (state, action: PayloadAction<XboxGameArticle>) => {
             state.Xarticles.push(action.payload);
-        },
-        toggleBuying: (state, action: PayloadAction<number>) => {
-            const index = state.Xarticles.findIndex((a) => a.id === action.payload);
-            if (index !== -1) {
-
-            }
-        },
-        BuiedXboxCard: (state, action: PayloadAction<number>) => {
-            //action.payload = id of the card to remove
-            const index = state.Xarticles.findIndex((c) => c.id === action.payload);
-
-            //delete the card at index:
-            state.Xarticles.splice(index, 1);
-        },
+        }
     },
 });
 // also exported fetchUsers at the top
 
 //export the reducer
 export default gameSlice.reducer
-export const { toggleBuying, BuiedXboxCard } = gameSlice.actions
 

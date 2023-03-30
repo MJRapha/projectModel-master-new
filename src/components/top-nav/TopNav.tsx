@@ -8,7 +8,6 @@ import { IsActiveProps } from "../../@types/types";
 import { Button } from "react-bootstrap";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 
-// yarn add react-bootstrap
 const TopNav = () => {
     const { openCart, cartQuantity } = useShoppingCart()
     const activeClass = (e: IsActiveProps, clz: string = "") =>
@@ -17,13 +16,11 @@ const TopNav = () => {
         <Navbar sticky="top" bg="dark" expand="lg">
             <Container>
                 <nav className={css.navWrapper}>
-                    {/* Brand: Logo + App Name */}
                     <NavLink to="/" className={activeClass}>
                         <span className="me-auto">Gaming Shop</span>
                         &nbsp;
                         <BiJoystick />
                     </NavLink>
-                    {/* Burger: */}
                     <Navbar.Toggle className="dropdown" aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">

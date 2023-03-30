@@ -11,18 +11,6 @@ const initialState: GameArticles = {
     articles: comingSoonGamesArr,
 };
 
-/* interface GameArticles {
-    loading: boolean,
-    error: string,
-    articles: [],
-}
-
-const initialState: GameArticles = {
-    loading: false,
-    error: "",
-    articles: [],
-}; */
-
 export const gameSlice = createSlice({
     name: "cards",
     initialState,

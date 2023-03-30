@@ -5,12 +5,13 @@ import css from './GameItem.module.scss'
 const GameItem = ({ nameOfGame, image, description, comingSoon }: SoonGamesItemProps) => {
     return (
         <>
-            <div className={css.deckOfCards} >
-                <div className="w-100 m-1 shadow-lg border-light border-5 rounded d-flex flex-column align-items-center">
-                    <img className="w-50 shadow-lg bg-white rounded card" src={image} alt="Card cap" style={{
+            <div className="d-flex flex-column border-5 border-dark rounded w-100">
+                <img className={css.gameImg}
+                    src={image} alt="Card cap" style={{
                         objectFit:
                             "cover"
                     }} />
+                <div style={{ backgroundColor: "black", width: "100%" }}>
                     <div className="m-2">
                         <h5 className={css.gameName}>{nameOfGame}</h5>
                     </div>

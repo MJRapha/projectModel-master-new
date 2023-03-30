@@ -92,15 +92,3 @@ export const nintendoGamesArr: NintendoGameArticle[] = [
         price: 15.00,
     }
 ];
-
-/* export const fetchArticles = () =>
-    fetch(nintendoGamesArr)
-        .then((res) => res.json())
-        .then((json) => json.articles as GameArticle[])
-        .then((articles) => {
-            articles.forEach((a) => {
-                a.id = v4();
-                a.isGettingBuied = false
-            });
-            return articles;
-        }); */

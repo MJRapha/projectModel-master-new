@@ -7,14 +7,14 @@ import pic6 from "../images/A-Plague-Tale-Requiem.jpg";
 import pic7 from "../images/Mario-Plus-Rabbids-Sparks-of-Hope.jpg";
 import pic8 from "../images/Xenoblade-Chronicles-3.jpg";
 import pic9 from "../images/Fire_Emblem_Engage.jpg";
-import pic10 from "../images/Calll-of-Duty-Modern-Warfare-II.jpg"
+import pic10 from "../images/Call-of-Duty-Modern-Warfare-II.jpg"
 import pic11 from "../images/Mortal-Kombat-11-Ultimate.jpg"
 import { NewGameArticle } from "../features/games/games.d";
 
 export const newGamesArr: NewGameArticle[] = [
     {
         id: 5356,
-        nameOfGame: "Ghost of Tsushima Director's Cut for PS5",
+        nameOfGame: "Ghost of Tsushima Director's Cut",
         image: pic1,
         description: "In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the east. Uncover the hidden words of Tsushima in an open-world action adventure in Ghost of Tsushima. Challenge opponents with your katana, master the art of archery, and develop stealth tactics.",
         company: "New",
@@ -30,7 +30,7 @@ export const newGamesArr: NewGameArticle[] = [
     },
     {
         id: 14169,
-        nameOfGame: "The Last of Us Part 1 for PS5",
+        nameOfGame: "The Last of Us Part 1",
         image: pic3,
         description: "Relive the beloved game that started it all. Experience the emotional storytelling and unforgettable characters in The Last of Us, winner of over 200 Game of the Year awards. In a ravaged civilization, where infected and hardened survivors run rampant, Joel, a weary protagonist, is hired to smuggle 14-year - old Ellie out of a military quarantine zone.However, what starts as a small job soon transforms into a brutal cross- country journey.Includes the complete The Last of Us single - player story and celebrated prequel chapter, Left Behind, which explores the events that changed the lives of Ellie and her best friend Riley forever.",
         company: "New",
@@ -38,7 +38,7 @@ export const newGamesArr: NewGameArticle[] = [
     },
     {
         id: 14403,
-        nameOfGame: "Call of Duty: Vanguard for PS5",
+        nameOfGame: "Call of Duty: Vanguard",
         image: pic4,
         description: "COD returns with breathtaking gameplay that redefines war like you’ve never seen before. Immerse yourself into the most gritty and tumultuous WWII battle ever in this epic, first-person shooter video game.",
         company: "New",
@@ -101,15 +101,3 @@ export const newGamesArr: NewGameArticle[] = [
         price: 18.99
     }
 ];
-
-/* export const fetchArticles = () =>
-    fetch(newGamesArr)
-        .then((res) => res.json())
-        .then((json) => json.articles as GameArticle[])
-        .then((articles) => {
-            articles.forEach((a) => {
-                a.id = v4();
-                a.isGettingBuied = false
-            });
-            return articles;
-        }); */

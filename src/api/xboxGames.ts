@@ -92,15 +92,3 @@ export const xboxGamesArr: XboxGameArticle[] = [
         price: 5.99
     },
 ];
-
-/* export const fetchArticles = () =>
-    fetch(xboxGamesArr)
-        .then((res) => res.json())
-        .then((json) => json.articles as GameArticle[])
-        .then((articles) => {
-            articles.forEach((a) => {
-                a.id = v4();
-                a.isGettingBuied = false
-            });
-            return articles;
-        }); */

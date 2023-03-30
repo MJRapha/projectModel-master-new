@@ -15,21 +15,7 @@
     }
 }
 
-.homeCard {
-    background-color: #202020;
-    border: 1px transparent;
-    border-radius: 12px;
-    transition: 0.3s all;
-    position: absolute;
-    width: 285px;
-    left: 25.95%;
-    top: 35.25%;
-    margin: 1px;
-}
-
-// m-1 shadow-lg border-light border-5 rounded d-flex flex-column align-items-center
-
-.homeCard .gameImg {
+.gameImg {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     max-width: 100%;
@@ -38,12 +24,6 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-}
-
-.deckOfCards {
-    width: 100%;
-    padding: 10px 5%;
-    margin: 2px;
 }
 
 .cardBody {

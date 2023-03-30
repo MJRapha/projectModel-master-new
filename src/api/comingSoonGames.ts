@@ -13,7 +13,7 @@ import { SoonGameArticle } from "../features/games/games.d";
 export const comingSoonGamesArr: SoonGameArticle[] = [
     {
         id: "7548",
-        nameOfGame: "Street Fighter 6 for PS5",
+        nameOfGame: "Street Fighter 6",
         image: pic1,
         company: "Sony Playstation",
         description: "A new era for fighting games begins in 2023! The evolution of fighting games starts with our traditional Fighting Ground, and then we're turning the genre on its head with World Tour and Battle Hub for a total of three modes where anyone can play to their liking. No one starts off as a champion.You get there step by step, punch by punch. Take up the challenge and bring your game to the next level.",
@@ -21,7 +21,7 @@ export const comingSoonGamesArr: SoonGameArticle[] = [
     },
     {
         id: "9543",
-        nameOfGame: "Final Fantasy XVI for PS5",
+        nameOfGame: "Final Fantasy XVI",
         image: pic2,
         company: "Sony Playstation",
         description: "The sun is setting upon the land of Valisthea. For centuries, people have flocked to her Mothercrystals to partake of their blessing—the abundant aether that fuels the magicks they rely upon in their everyday lives. But as the aether begins to fade and the lifeless deadlands spread ever further, so too does the struggle over the final flickers of the Mothers' light grow ever more fierce. Bloody battle rages across the realm, rival nations sending their ultimate weapons against each other: the Dominants. Men and women within whom sleep the world-shattering power of an Eikon.",
@@ -45,7 +45,7 @@ export const comingSoonGamesArr: SoonGameArticle[] = [
     },
     {
         id: "6571",
-        nameOfGame: "Atomic Heart for PS5",
+        nameOfGame: "Atomic Heart",
         image: pic5,
         company: "Sony Playstation",
         description: "Welcome to a utopian world of wonders and perfection, in which humans live in harmony with their loyal and fervent robots. Well, that’s how it used to be. With the launch of the latest robot-control system mere days away, only a tragic accident or a global conspiracy could disrupt it…",
@@ -61,7 +61,7 @@ export const comingSoonGamesArr: SoonGameArticle[] = [
     },
     {
         id: "12953",
-        nameOfGame: "The Legend of Heroes: Trails to Azure for PS4",
+        nameOfGame: "The Legend of Heroes: Trails to Azure",
         image: pic7,
         company: "Sony Playstation",
         description: "Set just a few months after the events of Trails from Zero, a temporary peace has settled over Crossbell and the Special Support Section find themselves with newfound fame and status, thanks to their heroic actions.",
@@ -92,15 +92,3 @@ export const comingSoonGamesArr: SoonGameArticle[] = [
         comingSoon: "April 28 2023"
     }
 ];
-
-/* export const fetchArticles = () =>
-    fetch(comingSoonGamesArr)
-        .then((res) => res.json())
-        .then((json) => json.articles as GameArticle[])
-        .then((articles) => {
-            articles.forEach((a) => {
-                a.id = v4();
-                a.isGettingBuied = false
-            });
-            return articles;
-        }); */

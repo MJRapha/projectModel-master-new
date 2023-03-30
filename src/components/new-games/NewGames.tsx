@@ -13,6 +13,10 @@ const responsive = {
         breakpoint: { max: 3000, min: 1024 },
         items: 4,
     },
+    betweenDesktopAndTablet: {
+        breakpoint: { max: 1200, min: 758 },
+        items: 3,
+    },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
         items: 2,
