@@ -63,7 +63,7 @@ export default function App() {
                 Tel:
                 &nbsp;
                 <a className='text-white' href='https://mdbootstrap.com/'>
-                    0549787986
+                    +972-549787986
                 </a>
             </div>
         </footer>
