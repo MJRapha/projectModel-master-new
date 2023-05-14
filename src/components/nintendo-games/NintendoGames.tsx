@@ -3,6 +3,7 @@ import NintendoGameItem from '../../routes/games/NintendoGameItem';
 import css from './NintendoGames.module.scss'
 
 const NintendoGames = () => {
+    //using hook of selector
     const nintendoGames = useAppSelector((s) => s.NintendoGames.Narticles);
     return (
         <div className={css.gridContainer}>

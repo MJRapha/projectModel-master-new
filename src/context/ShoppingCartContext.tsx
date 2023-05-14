@@ -2,16 +2,19 @@ import { createContext, ReactNode, useContext, useState } from "react"
 import { useLocalStorage } from "../hooks/useLocalStorage"
 import BuyingBasket from "../routes/buying-basket/BuyingBasket"
 
+//type props for the shoppingcart
 type ShoppingCartProviderProps = {
     children: ReactNode
 }
 
+//creating type for the cart's product
 type CartItem = {
     id: number,
     quantity: number,
     name?: string
 }
 
+//creating type for the cart's options
 type ShoppingCartContexT = {
     openCart: () => void
     closeCart: () => void
@@ -25,12 +28,14 @@ type ShoppingCartContexT = {
     shoppingCartItems: any
 }
 
+//creating context as the type that we create ^
 const ShoppingCartContext = createContext({} as ShoppingCartContexT)
 
 export function useShoppingCart() {
     return useContext(ShoppingCartContext)
 }
 
+//function for shopping cart
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     const [isOpen, setIsOpen] = useState(false)
     const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart", [])
@@ -41,18 +46,17 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     const openCart = () => setIsOpen(true)
     const closeCart = () => setIsOpen(false)
 
+    //getting the number of products we have inside the cart
     function getItemQuantity(id: number) {
         return cartItems.find(item => item.id === id)?.quantity || 0
     }
 
-
-
+    //the products inside the cart
     function shoppingCartItems(item: CartItem) {
         setCartItemData([...cartItemData, item])
     }
 
-
-
+    //increase cart's quantity
     function increaseCartQuantity(id: number) {
         setCartItems(currItems => {
             if (currItems.find(item => item.id === id) == null) {
@@ -69,8 +73,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })
     }
 
-
-
+    //decrease cart's quantity
     function decreaseCartQuantity(id: number) {
         setCartItems(currItems => {
             if (currItems.find(item => item.id === id)?.quantity === 1) {
@@ -87,6 +90,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })
     }
 
+    //remove product from the cart
     function removeFromCart(id: number) {
         setCartItems(currItems => {
             return currItems.filter(item => item.id !== id)

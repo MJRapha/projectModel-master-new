@@ -8,19 +8,23 @@ import { useAppSelector } from "../../app/hooks"
 import { useShoppingCart } from "../../context/ShoppingCartContext"
 import { formatCurrency } from "../../utilities/formatCurrency"
 
+//creating type props for the card's product
 type CardItemProps = {
     id: number
     quantity: number
 }
 
 const CartItem = ({ id, quantity }: CardItemProps) => {
+    //using hook of selector for every article we made
     const { Narticles } = useAppSelector((state) => state.NintendoGames);
     const { Xarticles } = useAppSelector((state) => state.XboxGames);
     const { PSarticles } = useAppSelector((state) => state.PSGames);
     const { articles } = useAppSelector((state) => state.NewGames);
+    //pushing all the articles inside a variable
     let allArticles = [...Narticles, ...Xarticles, ...PSarticles, ...articles]
     const { removeFromCart } = useShoppingCart()
 
+    //looking form every games's array for every product that is connected with him
     const nintendoItem = nintendoGamesArr.find(i => i.id === id)
     if (nintendoItem == null) {
         return null
@@ -44,9 +48,11 @@ const CartItem = ({ id, quantity }: CardItemProps) => {
 
     return (
         <>
+            {/* using map for the variable we made */}
             {allArticles.map((a) => (
                 <Fragment>
                     {
+                        //sreaching for which company the product belongs to
                         (
                             a.company === 'Nintendo' &&
                             <Stack direction="horizontal" gap={2} className="d-flex align-items-center" >

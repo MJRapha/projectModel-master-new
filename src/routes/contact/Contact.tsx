@@ -39,7 +39,7 @@ function Contact() {
                         </label>
                         <textarea className="form-control" id="message" required />
                     </div>
-                    <button className={css.buttonSub} type="submit" /* onClick={(e) => setName(e.target.value)} */>
+                    <button className={css.buttonSub} type="submit">
                         {formStatus}
                     </button>
                 </form>

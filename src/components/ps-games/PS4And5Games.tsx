@@ -2,7 +2,8 @@ import { useAppSelector } from '../../app/hooks';
 import PSGameItem from '../../routes/games/SonyPSGameItem';
 import css from './PS4AndPS5Games.module.scss'
 
-function PS4And5Games() {
+const PS4And5Games = () => {
+    //using hook of selector
     const psGames = useAppSelector((s) => s.PSGames.PSarticles);
     return (
         <div className={css.gridContainer}>

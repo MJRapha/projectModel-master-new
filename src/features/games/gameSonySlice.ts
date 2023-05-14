@@ -2,11 +2,12 @@ import { SonyGameArticle } from "./games.d";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { psGamesArr } from "../../api/psGames";
 
-
+//interface
 export interface GameArticles {
     PSarticles: SonyGameArticle[];
 }
 
+//initial state
 const initialState: GameArticles = {
     PSarticles: psGamesArr,
 };
@@ -21,7 +22,6 @@ export const gameSlice = createSlice({
         }
     },
 });
-// also exported fetchUsers at the top
 
 //export the reducer
 export default gameSlice.reducer

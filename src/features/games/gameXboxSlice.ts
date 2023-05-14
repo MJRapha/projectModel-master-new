@@ -2,10 +2,12 @@ import { XboxGameArticle } from "./games.d";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { xboxGamesArr } from "../../api/xboxGames";
 
+//interface
 export interface GameArticles {
     Xarticles: XboxGameArticle[];
 }
 
+//initial state
 const initialState: GameArticles = {
     Xarticles: xboxGamesArr,
 };
@@ -20,7 +22,6 @@ export const gameSlice = createSlice({
         }
     },
 });
-// also exported fetchUsers at the top
 
 //export the reducer
 export default gameSlice.reducer

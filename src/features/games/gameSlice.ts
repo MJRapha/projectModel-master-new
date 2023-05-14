@@ -2,10 +2,12 @@ import { NewGameArticle } from "./games.d";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { newGamesArr } from "../../api/newGamesArr";
 
+//interface
 export interface GameArticles {
     articles: NewGameArticle[];
 }
 
+//initial state
 const initialState: GameArticles = {
     articles: newGamesArr,
 };
@@ -20,7 +22,6 @@ export const gameSlice = createSlice({
         }
     },
 });
-// also exported fetchUsers at the top
 
 //export the reducer
 export default gameSlice.reducer

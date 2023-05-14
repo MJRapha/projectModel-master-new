@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 import css from './SoonGames.module.scss'
 
+//responsive for the multi carousel
 const responsive = {
     superLargeDesktop: {
         breakpoint: { max: 4000, min: 3000 },
@@ -24,9 +25,11 @@ const responsive = {
 };
 
 const SoonGames = () => {
+    //using hook of selector
     const comingSoonGames = useAppSelector((s) => s.SoonGames.articles);
     return (
         <div className={css.listCards}>
+            {/* Multi Carousel */}
             <Carousel responsive={responsive}>
                 {comingSoonGames.map((g) => (
                     <SoonGameItem {...g} key={g.id} />

@@ -33,7 +33,8 @@ const TopNav = () => {
                             onClick={openCart}
                             style={{ width: "3rem", height: "3rem", position: "relative" }}
                             variant="outline-primary"
-                            className="rounded-circle" >
+                            className="rounded-circle">
+                            {/* svg for a cart icon */}
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -42,6 +43,7 @@ const TopNav = () => {
                                     <path d="M15 11V6C15 4.34315 13.6569 3 12 3V3C10.3431 3 9 4.34315 9 6V11" stroke="#fdfcfc" strokeWidth="2" strokeLinecap="round"></path>
                                 </g>
                             </svg>
+                            {/* Inticator that telling how many items are in the cart */}
                             {cartQuantity > 0 && (
                                 <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center" style={{
                                     color: "white",
